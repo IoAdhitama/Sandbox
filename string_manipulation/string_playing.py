@@ -13,6 +13,7 @@ user_input = ""
 
 while user_input != "exit":
 
-    user_input = string_data.get_input("Insert a sentence. Input 'exit' to exit.: ")
+    user_input = string_data.get_input("Insert a sentence. Input 'exit' to exit: ")
+    string_data.sort_by_second_letter(user_input)
 
     print(string_data.input_history)
