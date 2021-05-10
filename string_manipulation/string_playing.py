@@ -13,7 +13,6 @@ user_input = ""
 
 while user_input != "exit":
 
-    user_input = input("Insert a sentence. Input 'exit' to exit.: ")
-    string_data.get_input(user_input)
-    
+    user_input = string_data.get_input("Insert a sentence. Input 'exit' to exit.: ")
+
     print(string_data.input_history)

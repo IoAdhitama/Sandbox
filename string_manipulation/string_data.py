@@ -1,9 +1,11 @@
 input_history = []
 
-def get_input(string_input):
+def get_input(input_prompt):
+    string_input = input(input_prompt)
     input_history.append(string_input)
+    return string_input
 
-def input_process(sentence): # Process the input and return list of words ordered by second letter
+def sort_by_second_letter(sentence): # Process the input and return list of words ordered by second letter
     sentence.split()
     print(sentence)
 
