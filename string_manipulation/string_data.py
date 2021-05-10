@@ -39,3 +39,33 @@ def get_string_info(): # Count the number of words and sentences in the input
     print("The number of sentence in the input is {}.".format(len(sentences)))
     print("The number of words in the input is {}.".format(len(words)))
     print()
+
+
+def find_short_words(): # Find all words that are shorter than 5 letters long
+    words = input_history[-1].split(' ')
+
+    print("List of words that are less than 5 letters:")
+    for i in range(len(words)):
+        if len(words[i]) < 5:
+            print(words[i])
+
+    print()
+
+    # For each word in words, remove all the vowels
+    words_without_vowels = []
+    vowels = ('a', 'i', 'u', 'e', 'o')
+
+    for word in words:
+        for letter in word.lower():
+            if letter in vowels:
+                word = word.replace(letter, "")
+        words_without_vowels.append(word)
+
+    print(words_without_vowels)
+
+    # Print words that are shorter than 5 letters long
+    print("List of words that are less than 5 letters, excluding vowels:")
+    for i in range(len(words)):
+        if len(words_without_vowels[i]) < 5:
+            print(words[i])
+    print()

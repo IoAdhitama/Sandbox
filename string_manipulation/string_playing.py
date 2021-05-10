@@ -24,4 +24,6 @@ while user_input != "exit":
 
     string_data.get_string_info()
 
+    string_data.find_short_words()
+
     print(string_data.input_history)
