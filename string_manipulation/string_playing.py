@@ -17,7 +17,11 @@ while user_input != "exit":
 
     if user_input == "previous": # Return the previous input is "previous" is the input
         string_data.return_previous_input()
+    elif user_input == "exit":
+        break
     
     string_data.sort_by_second_letter()
+
+    string_data.get_string_info()
 
     print(string_data.input_history)

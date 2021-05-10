@@ -27,3 +27,15 @@ def return_previous_input(): # Return the previous input.
     else:
         input_history.pop()
         print(input_history[-1])
+
+def get_string_info(): # Count the number of words and sentences in the input
+    sentences = input_history[-1].split('. ')
+    words = input_history[-1].split(' ')
+
+    # Remove any empty list entry
+    [sentences.pop(i) for i in range(len(sentences)) if sentences[i] == '']
+    [words.pop(i) for i in range(len(words)) if words[i] == '']
+
+    print("The number of sentence in the input is {}.".format(len(sentences)))
+    print("The number of words in the input is {}.".format(len(words)))
+    print()
