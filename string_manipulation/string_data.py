@@ -11,16 +11,19 @@ def get_second_letter(word):
     else:
         return word[1]
 
-def sort_by_second_letter(sentence): # Process the input and return list of words ordered by second letter
-    words = sentence.split()
+def sort_by_second_letter(): # Process the input and return list of words ordered by second letter
+    words = input_history[-1].split()
     words.sort(key = get_second_letter)
 
     print("List of all words ordered by the second letter from the left: ")
     for i in range(len(words)):
         print(words[i])
 
+    print()
+
 def return_previous_input(): # Return the previous input.
-    if len(input_history) <= 1:
+    if len(input_history) == 0:
         print("No input in history.")
     else:
-        print(input_history[len(input_history)])
+        input_history.pop()
+        print(input_history[-1])
